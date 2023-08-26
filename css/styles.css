@@ -1,0 +1,103 @@
+/* Estilos generales de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Estilos del menú */
+.menu {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title, .menu-button {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Estilos del botón "Iniciar Juego" */
+.menu-button {
+    font-size: 20px;
+    padding: 10px 30px; /* Aumenta el espacio horizontal para separar los botones */
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, padding 0.3s ease; /* Transición para el efecto de escala, cambio de color de fondo y separación */
+}
+
+/* Estilos del enlace dentro del botón */
+.menu-button .menu-link {
+    color: inherit; /* Hereda el color del texto del botón */
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.menu-button:hover {
+    transform: scale(1.1); /* Escala ligeramente al pasar el ratón sobre el botón */
+    background-color: #ff7043; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+    padding: 10px 60px; /* Aumenta el espacio horizontal cuando el botón está en su tamaño expandido */
+}
+
+.menu-button:active {
+    background-color: #ff5722;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    opacity: 0; /* Inicialmente, el modal estará completamente transparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: opacity 0.5s ease; /* Agregamos una transición para opacity */
+}
+
+.modal-content {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*Configuracion general para el cuerpo de la pagina*/
+* {
+    font-family: var(--general);
+    cursor: url('../img/mouseDefault.png'), auto;
+}
+
+.menu-button, .menu-button a, .close{
+  cursor: url('../img/mouseSelector.png'), auto;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--HTML en español-->
+<html lang="es">
+<head>
+    <!--Codifica caracteres especiales-->
+    <meta charset="utf-8" />
+    <!--meta:kw Palabras clave para el navegador-->
+    <meta name="keywords" content="juego, RPG, turnos" />
+    <!--meta:desc Descripcion de la pagina-->
+    <meta name="description" content="Juego" />
+    <!--meta Autor del sitio Web-->
+    <meta name="author" content="José Sánchez Muñoz @https://github.com/JoseSanchezMunoz" />
+    <!--meta Aviso de Copyright del sitio-->
+    <meta name="copyright" content="El Calabozo del dragon 2023" />
+    <!--meta Indexado del sitio para su vista en el buscador-->
+    <meta name="robots" content="index" />
+    <!--meta:vp Diseño responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--meta:ed Compatibilidad con navegadores antiguos-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Titulo de la pagina actual-->
+    <title>Selección de Personaje</title>
+    <!--link Icono de la pagina actual-->
+    <link rel="icon" href="img/icono.png" />
+    <!--link Reseteo de los estilos propios del navegador (user-agent) -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!--link Hoja de estilos del sitio-->
+    <link rel="stylesheet" href="css/characterStyles.css">
+    <!--script para iconos en fontawesome-->
+    <script src="https://kit.fontawesome.com/6c3a42cb33.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a href="index.html" class="menu-link-button">Volver al Menú Principal</a>
+    <div class="character-selection">
+        <h1 class="header">Seleccione su personaje</h1>
+        <div class="characters">
+            <div class="character">
+                <img src="img/character1.png" alt="Personaje 1">
+                <button class="select-button" onclick="showStats(1)">Character1</button>
+            </div>
+            <div class="character">
+                <img src="img/character2.png" alt="Personaje 2">
+                <button class="select-button" onclick="showStats(2)">Character2</button>
+            </div>
+            <div class="character">
+                <img src="img/character3.png" alt="Personaje 3">
+                <button class="select-button" onclick="showStats(3)">Character3</button>
+            </div>
+        </div>
+        <div id="character-stats" style="display: none;">
+            <div class="character-info">
+                <img id="character-image" src="" alt="Personaje">
+                <div class="stats">
+                    <h2>Estadísticas del Personaje</h2>
+                    <p>Nombre: <span id="character-name"></span></p>
+                    <p>HP (Vida): <span id="character-hp"></span></p>
+                    <p>ATK (Ataque): <span id="character-atk"></span></p>
+                    <p>DEF (Defensa): <span id="character-def"></span></p>
+                    <p>MAN (Mana): <span id="character-man"></span></p>
+                    <button class="select-button" onclick="confirmSelection()">Confirmar Selección</button>
+                    <button class="select-button" onclick="resetSelection()">Volver a Seleccionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/characterScript.js"></script>
+</body>
+
+</html>

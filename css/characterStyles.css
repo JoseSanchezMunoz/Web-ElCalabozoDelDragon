@@ -1,0 +1,106 @@
+/* Estilos generales de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Estilos del enlace "Volver al Menú Principal" */
+.menu-link-button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0 0 0 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.menu-link-button:hover {
+    background-color: #ff7043;
+}
+
+/* Estilos del contenido de la página */
+.character-selection {
+    text-align: center;
+    padding: 20px;
+}
+
+.header {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.character {
+    margin: 10px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.character img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.select-button {
+    margin-top: 10px;
+    padding: 5px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
+}
+
+.select-button:hover {
+    transform: scale(1.1);
+    background-color: #ff7043;
+    padding: 5px 40px;
+}
+
+.select-button:active {
+    background-color: #ff5722;
+}
+
+/* Estilos del modal */
+#character-stats {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+
+/*Configuracion general para el cuerpo de la pagina*/
+* {
+    font-family: var(--general);
+    cursor: url('../img/mouseDefault.png'), auto;
+}
+
+.select-button, .select-button a, .menu-link-button{
+  cursor: url('../img/mouseSelector.png'), auto;
+}
